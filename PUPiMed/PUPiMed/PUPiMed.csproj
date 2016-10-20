@@ -1,0 +1,1222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F74FB65-366C-4BE6-BC52-D330082C0825}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PUPiMed</RootNamespace>
+    <AssemblyName>PUPiMed</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>en</TargetCulture>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PUPiMed.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A57108BBE3E6084DA970D723C7FCAE73CFE76CA0</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PUPiMed_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.CrystalReports.Engine.1.0.0\lib\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Metro\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Metro\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Metro\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Core.1.1.2\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.9\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Transitions, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\dot-net-transitions.1.2.1.0\lib\net40-full\Transitions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\formRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formRegistration.Designer.cs">
+      <DependentUpon>formRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Maintenance\FormAddPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Maintenance\FormAddPatient.designer.cs">
+      <DependentUpon>FormAddPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Search\FormBranchSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Search\FormBranchSearch.Designer.cs">
+      <DependentUpon>FormBranchSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Search\FormItemSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Search\FormItemSearch.Designer.cs">
+      <DependentUpon>FormItemSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Search\FormManufacturerSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Search\FormManufacturerSearch.Designer.cs">
+      <DependentUpon>FormManufacturerSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formMenu.Designer.cs">
+      <DependentUpon>formMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Search\FormPatientLogsSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Search\FormPatientLogsSearch.designer.cs">
+      <DependentUpon>FormPatientLogsSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Search\FormPatientsSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Search\FormPatientsSearch.Designer.cs">
+      <DependentUpon>FormPatientsSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Search\FormReceiveItemSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Search\FormReceiveItemSearch.designer.cs">
+      <DependentUpon>FormReceiveItemSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Search\FormSupplierSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Search\FormSupplierSearch.Designer.cs">
+      <DependentUpon>FormSupplierSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions\AddPatientLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\AddPatientLogs.Designer.cs">
+      <DependentUpon>AddPatientLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Maintenance\FormAddBranches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Maintenance\FormAddBranches.Designer.cs">
+      <DependentUpon>FormAddBranches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notif\FormAnimator.cs" />
+    <Compile Include="Forms\Transactions\FormAddDistribItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormAddDistribItem.designer.cs">
+      <DependentUpon>FormAddDistribItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Maintenance\FormAddManufacturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Maintenance\FormAddManufacturer.Designer.cs">
+      <DependentUpon>FormAddManufacturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Maintenance\FormAddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Maintenance\FormAddSupplier.designer.cs">
+      <DependentUpon>FormAddSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Maintenance\FormAddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Maintenance\FormAddItem.Designer.cs">
+      <DependentUpon>FormAddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormReceiveInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transactions\FormReceiveInventory.designer.cs">
+      <DependentUpon>FormReceiveInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginNew.Designer.cs">
+      <DependentUpon>LoginNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notif\NativeMethods.cs" />
+    <Compile Include="Notes.cs" />
+    <Compile Include="Notif\Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notif\Notification.designer.cs">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notif\NotificationInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="rptDailyStockCard.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDailyStockCard.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="rptDistrib.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDistrib.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="rptDistribAnnual.cs">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDistribAnnual.rpt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="rptDistribPickADate.cs">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDistribPickADate.rpt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="rptDistribQuarterly.cs">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDistribQuarterly.rpt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="rptDistribSemi.cs">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDistribSemi.rpt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="rptDTR.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDTR.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="rptDTRAnnual.cs">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDTRAnnual.rpt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="rptDTRMonthly.cs">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDTRMonthly.rpt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="rptDTRPickADate.cs">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDTRPickADate.rpt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="rptDTRQuarterly.cs">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDTRQuarterly.rpt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="rptDTRSemi.cs">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDTRSemi.rpt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="rptItemList.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptItemList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="rptItemList1.cs">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptItemList1.rpt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="rptReceive.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptReceive.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="rptReceiveAnnual.cs">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptReceiveAnnual.rpt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="rptReceivePickADate.cs">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptReceivePickADate.rpt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="rptReceiveSemi.cs">
+      <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptReceiveSemi.rpt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="rptStockCard.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptStockCard.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="rptStocks.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptStocks.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCDepartment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCDepartment.designer.cs">
+      <DependentUpon>UCDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Reports\UCReportDistrib.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Reports\UCReportDistrib.designer.cs">
+      <DependentUpon>UCReportDistrib.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Reports\UCReportDTR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Reports\UCReportDTR.designer.cs">
+      <DependentUpon>UCReportDTR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Reports\UCReportItemList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Reports\UCReportItemList.designer.cs">
+      <DependentUpon>UCReportItemList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Reports\UCReportReceive.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Reports\UCReportReceive.designer.cs">
+      <DependentUpon>UCReportReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Reports\UCReportStockCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Reports\UCReportStockCard.designer.cs">
+      <DependentUpon>UCReportStockCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\rptDailyStockCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCMenuMaintenance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCMenuMaintenance.designer.cs">
+      <DependentUpon>UCMenuMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCCollege.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCCollege.Designer.cs">
+      <DependentUpon>UCCollege.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCMenuItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCMenuItems.Designer.cs">
+      <DependentUpon>UCMenuItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCMenuPatient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCMenuPatient.Designer.cs">
+      <DependentUpon>UCMenuPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Transactions\UCItemReceive.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Transactions\UCItemReceive.Designer.cs">
+      <DependentUpon>UCItemReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCPatiRecords.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCPatiRecords.Designer.cs">
+      <DependentUpon>UCPatiRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCHome.Designer.cs">
+      <DependentUpon>UCHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCPatiAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCPatiAdmin.Designer.cs">
+      <DependentUpon>UCPatiAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCBranches.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCBranches.Designer.cs">
+      <DependentUpon>UCBranches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCPatiFaculty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCPatiFaculty.Designer.cs">
+      <DependentUpon>UCPatiFaculty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Transactions\UCItemDistribution.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Transactions\UCItemDistribution.Designer.cs">
+      <DependentUpon>UCItemDistribution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Transactions\UCItemInventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Transactions\UCItemInventory.designer.cs">
+      <DependentUpon>UCItemInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCItemLibrary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCItemLibrary.Designer.cs">
+      <DependentUpon>UCItemLibrary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCItem.Designer.cs">
+      <DependentUpon>UCItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCManufacturer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCManufacturer.Designer.cs">
+      <DependentUpon>UCManufacturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCNotifications.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCNotifications.Designer.cs">
+      <DependentUpon>UCNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Transactions\UCPatientLogs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Transactions\UCPatientLogs.Designer.cs">
+      <DependentUpon>UCPatientLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCPatiStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCPatiStudent.Designer.cs">
+      <DependentUpon>UCPatiStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCReportSubMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCReportSubMenu.Designer.cs">
+      <DependentUpon>UCReportSubMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCSupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Maintenance\UCSupplier.Designer.cs">
+      <DependentUpon>UCSupplier.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\formRegistration.resx">
+      <DependentUpon>formRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Maintenance\FormAddPatient.resx">
+      <DependentUpon>FormAddPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Search\FormBranchSearch.resx">
+      <DependentUpon>FormBranchSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Search\FormItemSearch.resx">
+      <DependentUpon>FormItemSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Search\FormManufacturerSearch.resx">
+      <DependentUpon>FormManufacturerSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formMenu.resx">
+      <DependentUpon>formMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Search\FormPatientLogsSearch.resx">
+      <DependentUpon>FormPatientLogsSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Search\FormPatientsSearch.resx">
+      <DependentUpon>FormPatientsSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Search\FormReceiveItemSearch.resx">
+      <DependentUpon>FormReceiveItemSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Search\FormSupplierSearch.resx">
+      <DependentUpon>FormSupplierSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\AddPatientLogs.resx">
+      <DependentUpon>AddPatientLogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Maintenance\FormAddBranches.resx">
+      <DependentUpon>FormAddBranches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\FormAddDistribItem.resx">
+      <DependentUpon>FormAddDistribItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Maintenance\FormAddManufacturer.resx">
+      <DependentUpon>FormAddManufacturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Maintenance\FormAddSupplier.resx">
+      <DependentUpon>FormAddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Maintenance\FormAddItem.resx">
+      <DependentUpon>FormAddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transactions\FormReceiveInventory.resx">
+      <DependentUpon>FormReceiveInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginNew.resx">
+      <DependentUpon>LoginNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notif\Notification.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDailyStockCard.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDailyStockCard.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDistrib.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDistrib.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDistribAnnual.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDistribAnnual.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDistribPickADate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDistribPickADate.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDistribQuarterly.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDistribQuarterly.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDistribSemi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDistribSemi.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDTR.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDTR.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDTRAnnual.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDTRAnnual.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDTRMonthly.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDTRMonthly.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDTRPickADate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDTRPickADate.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDTRQuarterly.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDTRQuarterly.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDTRSemi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDTRSemi.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptItemList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptItemList.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptItemList1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptItemList1.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReceive.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptReceive.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReceiveAnnual.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptReceiveAnnual.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReceivePickADate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptReceivePickADate.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReceiveSemi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptReceiveSemi.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptStockCard.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptStockCard.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptStocks.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptStocks.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Maintenance\UCDepartment.resx">
+      <DependentUpon>UCDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Reports\UCReportDistrib.resx">
+      <DependentUpon>UCReportDistrib.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Reports\UCReportDTR.resx">
+      <DependentUpon>UCReportDTR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Reports\UCReportItemList.resx">
+      <DependentUpon>UCReportItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Reports\UCReportReceive.resx">
+      <DependentUpon>UCReportReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Reports\UCReportStockCard.resx">
+      <DependentUpon>UCReportStockCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCMenuMaintenance.resx">
+      <DependentUpon>UCMenuMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Maintenance\UCCollege.resx">
+      <DependentUpon>UCCollege.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCMenuItems.resx">
+      <DependentUpon>UCMenuItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCMenuPatient.resx">
+      <DependentUpon>UCMenuPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Transactions\UCItemReceive.resx">
+      <DependentUpon>UCItemReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Maintenance\UCPatiRecords.resx">
+      <DependentUpon>UCPatiRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCHome.resx">
+      <DependentUpon>UCHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Maintenance\UCPatiAdmin.resx">
+      <DependentUpon>UCPatiAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Maintenance\UCBranches.resx">
+      <DependentUpon>UCBranches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Maintenance\UCPatiFaculty.resx">
+      <DependentUpon>UCPatiFaculty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Transactions\UCItemDistribution.resx">
+      <DependentUpon>UCItemDistribution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Transactions\UCItemInventory.resx">
+      <DependentUpon>UCItemInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Maintenance\UCItemLibrary.resx">
+      <DependentUpon>UCItemLibrary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Maintenance\UCItem.resx">
+      <DependentUpon>UCItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Maintenance\UCManufacturer.resx">
+      <DependentUpon>UCManufacturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCNotifications.resx">
+      <DependentUpon>UCNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Transactions\UCPatientLogs.resx">
+      <DependentUpon>UCPatientLogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Maintenance\UCPatiStudent.resx">
+      <DependentUpon>UCPatiStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCReportSubMenu.resx">
+      <DependentUpon>UCReportSubMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Maintenance\UCSupplier.resx">
+      <DependentUpon>UCSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pill-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pill-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pill-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Patient Logs and Inventory System Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Patient Logs and Inventory System Logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Patient Logs and Inventory System Logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Patient Logs and Inventory System Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Patient Logs and Inventory System Logo 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Patient Logs and Inventory System Logo teal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoutshit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pill-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bandage-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medical-78-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invent1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\44224-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_login-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16784-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\med3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bandaid1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\med33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\med32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\med31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00deletefga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\med.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bandaid2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medical-78-5121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patient11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add ulit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bandaid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplies.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Solutions_Icon-17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00editedit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00deletefga1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\med1 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01medmed2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_teal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01lib2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01lib.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01inventory2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01lib21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01supplies2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invent2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01patient2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01deliver2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01deliver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01sud2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01stud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01fac2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01fac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01admin2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock-2-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00add - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00add - Copy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\med321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplier-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <None Include="Resources\stocksshits.png" />
+    <None Include="Resources\expired.png" />
+    <None Include="Resources\expiredkeks.png" />
+    <None Include="Resources\darkcombo_chart_96px.png" />
+    <None Include="Resources\darkreceive.png" />
+    <None Include="Resources\darkreceive.pngkek.png" />
+    <None Include="Resources\treatment_plan_96pxdark.png" />
+    <None Include="Resources\feed_out_96px.png" />
+    <None Include="Resources\distrib.png" />
+    <None Include="Resources\combo_chart_100px.png" />
+    <None Include="Resources\report.png" />
+    <None Include="Resources\okay.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\add1.png" />
+    <None Include="Resources\add_group_25px.png" />
+    <None Include="Resources\bar_chart_104px.png" />
+    <None Include="Resources\calendar_96px.png" />
+    <Content Include="Resources\classroom_100px2.png" />
+    <None Include="Resources\save2.png" />
+    <None Include="Resources\keek.png" />
+    <None Include="Resources\keek2.png" />
+    <None Include="Resources\plus_2_math_27px1.png" />
+    <None Include="Resources\plus_2_math_30px.png" />
+    <None Include="Resources\plus_27px1.png" />
+    <None Include="Resources\plus_2_math_27px.png" />
+    <None Include="Resources\plus_27px.png" />
+    <None Include="Resources\plus_25px.png" />
+    <None Include="Resources\plus_30px.png" />
+    <None Include="Resources\darkplus.png" />
+    <None Include="Resources\plus_math_20px.png" />
+    <None Include="Resources\exit_20px.png" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\refresh-icon-png-2.png" />
+    <None Include="Resources\departmentgf1.png" />
+    <None Include="Resources\wallpaperdd.png" />
+    <None Include="Resources\savAEDwqfedark1.png" />
+    <None Include="Resources\wallpaper2.png" />
+    <None Include="Resources\wallpaper1.png" />
+    <None Include="Resources\truck_104psx.png" />
+    <None Include="Resources\latest ss.png" />
+    <None Include="Resources\log in backgroundss31.png" />
+    <None Include="Resources\log in background31.png" />
+    <None Include="Resources\l1.png" />
+    <None Include="Resources\latest logo5.png" />
+    <None Include="Resources\save11.png" />
+    <None Include="Resources\records.png" />
+    <None Include="Resources\itemssvs.png" />
+    <None Include="Resources\supplier-icon131.png" />
+    <None Include="Resources\receiveinventory1.png" />
+    <None Include="Resources\report21.png" />
+    <None Include="Resources\reporwerwert.png" />
+    <None Include="Resources\department.png" />
+    <None Include="Resources\supplier-icon13.png" />
+    <None Include="Resources\eqpmntjhg.png" />
+    <None Include="Resources\supplies9i1.png" />
+    <None Include="Resources\supplies9i.png" />
+    <None Include="Resources\brancheshf1.png" />
+    <None Include="Resources\supplier-icon12.png" />
+    <None Include="Resources\supplier-icon111.png" />
+    <None Include="Resources\supplier-icon11.png" />
+    <None Include="Resources\departmentgf.png" />
+    <None Include="Resources\brancheshf.png" />
+    <None Include="Resources\manufaturer2.png" />
+    <None Include="Resources\itemsss.png" />
+    <None Include="Resources\01inventory.png" />
+    <None Include="Resources\01inventory21.png" />
+    <None Include="Resources\branchesds %283%29.png" />
+    <None Include="Resources\new_produaasct_96px.png" />
+    <None Include="Resources\branchesds1.png" />
+    <None Include="Resources\manufacturer2.png" />
+    <None Include="Resources\asavesave.png" />
+    <None Include="Resources\manufacturer1.png" />
+    <None Include="Resources\branchesds.png" />
+    <None Include="Resources\eqpmnt.png" />
+    <None Include="Resources\suppliesd.png" />
+    <None Include="Resources\suppliesdff.png" />
+    <None Include="Resources\receiveinventory.png" />
+    <None Include="Resources\inventorykjf.png" />
+    <None Include="Resources\manufacturer.png" />
+    <None Include="Resources\Untitled-1.png" />
+    <None Include="Resources\report2.png" />
+    <None Include="Resources\error_104px1.png" />
+    <None Include="Resources\delete1.png" />
+    <None Include="Resources\aeditedit1.png" />
+    <None Include="Resources\adad.png" />
+    <None Include="Resources\cancelcancel1.png" />
+    <None Include="Resources\aokayokay1.png" />
+    <None Include="Resources\aeditedit.png" />
+    <None Include="Resources\cancelcancel.png" />
+    <None Include="Resources\aokayokay.png" />
+    <None Include="Resources\maintenance21.png" />
+    <None Include="Resources\reportnvbb.png" />
+    <None Include="Resources\maintenance2.png" />
+    <None Include="Resources\receiveinventoryy.png" />
+    <None Include="Resources\inventory.png" />
+    <None Include="Resources\14212137_1454968117852613_3539354946773151860_n.jpg" />
+    <None Include="Resources\multiply_104px.png" />
+    <None Include="Resources\enter_2_96px.png" />
+    <None Include="Resources\factory_100px1.png" />
+    <None Include="Resources\factory_100px.png" />
+    <None Include="Resources\clinic_100px.png" />
+    <None Include="Resources\school_filled_100px.png" />
+    <None Include="Resources\library_100px.png" />
+    <None Include="Resources\library_filled_100px.png" />
+    <None Include="Resources\eto na talaga.png" />
+    <None Include="Resources\searchnew.png" />
+    <None Include="Resources\truck_104px.png" />
+    <None Include="Resources\error_104px.png" />
+    <None Include="Resources\truck_52px.png" />
+    <None Include="Resources\error_45pxa.png" />
+    <None Include="Resources\classroom_45px.png" />
+    <None Include="Resources\truck_45px.png" />
+    <None Include="Resources\google_web_search_45px.png" />
+    <None Include="Resources\Patient Logs and Inventory System Logo blue,flat.png" />
+    <None Include="Resources\Patient Logs and Inventory System Logo blue,flat,noshadow.png" />
+    <None Include="Resources\log in background with logo.jpg" />
+    <None Include="Resources\key_45px.png" />
+    <None Include="Resources\key_50px.png" />
+    <None Include="Resources\gender_neutral_user_filled_50px.png" />
+    <None Include="Resources\user_male_52px.png" />
+    <None Include="Resources\enter_2_64px1.png" />
+    <None Include="Resources\log in background31.jpg" />
+    <None Include="Resources\enter_2_64px.png" />
+    <None Include="Resources\data_encryption_48px.png" />
+    <None Include="Resources\businessman_50px.png" />
+    <None Include="Resources\log in background3.jpg" />
+    <None Include="Resources\log in background.jpg" />
+    <None Include="Resources\truck_100px.png" />
+    <None Include="Resources\truck_48px.png" />
+    <None Include="Resources\invent4.png" />
+    <None Include="Resources\invent3.png" />
+    <None Include="Resources\01admin21.png" />
+    <None Include="Resources\supplier-icon1.png" />
+    <None Include="Resources\supplier-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
